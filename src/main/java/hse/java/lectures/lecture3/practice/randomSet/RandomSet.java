@@ -28,11 +28,11 @@ public class RandomSet<T extends Comparable<T>> {
 
         @SuppressWarnings("unchecked")
         T[] newValues = (T[]) new Comparable[capacity*2];
-        for (int i = 0; i < amountOfInts; i++) newValues[i] = values[i];
+        for (int i = 0; i < values.length; i++) newValues[i] = values[i];
         values = newValues;
 
         Node[] newNodes = new Node[capacity*2];
-        for (int i = 0; i < amountOfNodes; i++) newNodes[i] = nodes[i];
+        for (int i = 0; i < nodes.length; i++) newNodes[i] = nodes[i];
         nodes=newNodes;
 
         int[] newNumberNodeForValue = new int[capacity*2];
