@@ -27,7 +27,6 @@ public class StreamWriter implements Runnable {
     @Override
     public void run() {
         synchronized (monitor) {
-            // Writer threads are intentionally infinite for the task contract.
             while (true) {
                 if (monitor.current>=monitor.total){
                     monitor.notifyAll();
